@@ -21,8 +21,8 @@ class TestFilamentScalePlugin(unittest.TestCase):
             'tare': 8430152,
             'reference_unit': -411,
             'spool_weight': 200,
-            'clockpin': 21,
-            'datapin': 20,
+            'clockpin': 27,
+            'datapin': 17,
             'lastknownweight': 0
         }
         self.assertDictEqual(FilamentScalePlugin.get_settings_defaults(), defaults)
