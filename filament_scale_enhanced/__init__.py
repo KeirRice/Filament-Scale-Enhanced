@@ -33,8 +33,8 @@ class FilamentScalePlugin(octoprint.plugin.SettingsPlugin,
             tare=8430152,
             reference_unit=-411,
             spool_weight=200,
-            clockpin=27,
-            datapin=17,
+            clockpin=13,
+            datapin=11,
             lastknownweight=0
         )
 
@@ -47,7 +47,7 @@ class FilamentScalePlugin(octoprint.plugin.SettingsPlugin,
         )
 
     def on_startup(self, host, port):  # pylint: disable=unused-argument
-        self.hx = HX711(17, 27)
+        self.hx = HX711(11, 13)
         self.hx.set_reading_format("LSB", "MSB")
         self.hx.reset()
         self.hx.power_up()
